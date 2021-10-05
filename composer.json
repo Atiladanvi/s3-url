@@ -1,0 +1,54 @@
+{
+    "name": "atiladanvi/s3-url",
+    "description": "Generate url to your laravel aplication",
+    "keywords": [
+        "atiladanvi",
+        "s3-url"
+    ],
+    "homepage": "https://github.com/atiladanvi/s3-url",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Atila Silva",
+            "email": "atila.danvi@outlook.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Atiladanvi\\S3Url\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Atiladanvi\\S3Url\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Atiladanvi\\S3Url\\S3UrlServiceProvider"
+            ],
+            "aliases": {
+                "S3Url": "Atiladanvi\\S3Url\\S3UrlFacade"
+            }
+        }
+    }
+}
